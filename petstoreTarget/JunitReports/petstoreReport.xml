@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="52.356" tests="3" skipped="0" failures="1" errors="0">
+<testcase classname="Validate petstore" name="Login with valid credentials - Example #1.1" time="21.733">
+<system-out><![CDATA[
+Given I open Sign in page...................................................passed
+When I enter username "j2ee" and password "j2ee"............................passed
+And I click on login button.................................................passed
+Then I navigate to welcome page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate petstore" name="Validate submit order - 1" time="16.268">
+<system-out><![CDATA[
+Given I am on welcome page..................................................passed
+When I choose a particular type of pet......................................passed
+And I click on add to cart..................................................passed
+And I click on proceed to checkout..........................................passed
+And I confirm the order.....................................................passed
+Then I verify the order submission in MyOrder section.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate petstore" name="Validate submit order - 2" time="14.052">
+<failure type="java.lang.AssertionError" message="expected [81621] but found [81622]">
+<![CDATA[java.lang.AssertionError: expected [81621] but found [81622]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Bindings.PetstoreBinding.i_verify_the_order_submission_in_my_order_section(PetstoreBinding.java:144)
+	at ✽.I verify the order submission in MyOrder section(file:///Users/krishnakantjha/Wipro/IRCTCApp/src/main/java/Feature/petstore.feature:32)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I am on welcome page..................................................passed
+When I choose a particular type of pet......................................passed
+And I click on add to cart..................................................passed
+And I click on proceed to checkout..........................................passed
+And I confirm the order.....................................................passed
+Then I verify the order submission in MyOrder section.......................failed
+]]></system-out>
+</testcase>
+</testsuite>
